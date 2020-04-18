@@ -7,12 +7,17 @@ class TodoItemList extends Component {
     //onToggle: 체크박스를 키고 끄는 함수
     //onRemove: 아이템을 삭제시키는 함수
     const { todos, onToggle, onRemove } = this.props;
-    return (
-      <div>
-        <TodoItem text="hello" />
-        <TodoItem text="react" />
-      </div>
-    );
+    const todoList = todos.map(({ id, text, checked }) => (
+      <TodoItem
+        text={text}
+        checked={checked}
+        id={id}
+        onToggle={onToggle}
+        onRemove={onRemove}
+        key={id}
+      />
+    ));
+    return <div>{todoList}</div>;
   }
 }
 
