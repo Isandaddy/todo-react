@@ -32,7 +32,7 @@
   flex: 1; /* 체크, 엑스를 제외한 공간 다 채우기 */
   word-break: break-all;
 }
-
+/*  css속성은 여러개를 가질수있다 나중에 나오는것이 적용된다.*/
 .checked {
   text-decoration: line-through;
   color: #adb5bd;

@@ -14,7 +14,7 @@ class TodoItem extends Component {
         <div
           className="remove"
           onClick={e => {
-            e.stopPropagation(); // onToggle 이 실행되지 않도록 함
+            e.stopPropagation(); // 상위 박스의onToggle 이 실행되지 않도록 함
             onRemove(id);
           }}
         >
