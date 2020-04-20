@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import "./TodoItem.css";
 
 class TodoItem extends Component {
+  //todos의 checked를 현재props확인하여 checked가 다르면 상태변화감지하여 리렌더링
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.checked !== nextProps.checked;
+  }
+
   render() {
     //text: todo 내용
     //checked: 체크박스 상태
